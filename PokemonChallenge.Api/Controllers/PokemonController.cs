@@ -7,7 +7,7 @@ using PokemoneChallenge.Domain.Exceptions;
 namespace PokemonChallenge.Api.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class PokemonController : ControllerBase
 {
     private readonly ILogger<PokemonController> _logger;
