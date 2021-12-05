@@ -28,8 +28,8 @@ namespace PokemonChallenge.Api.Controllers
         {
             try
             {
-                var getPokemonByName = new GetPokemonByName { Name = name };
-                var pokemon = await _mediator.Send(getPokemonByName);
+                var getTranslatedPokemonByName = new GetTranslatedPokemonByName { Name = name };
+                var pokemon = await _mediator.Send(getTranslatedPokemonByName);
                 if (pokemon == null)
                 {
                     return NotFound();

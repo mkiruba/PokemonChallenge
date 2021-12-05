@@ -7,7 +7,7 @@ using PokemoneChallenge.Domain.Factories;
 
 namespace PokemonChallenge.Infrastructure.Queries.Handlers;
 
-public class TranslatedQueryHandler : IRequestHandler<GetPokemonByName, Pokemon>
+public class TranslatedQueryHandler : IRequestHandler<GetTranslatedPokemonByName, Pokemon>
 {
     private readonly IPokemonService _pokemonService;
     private readonly IPokemonFactory _pokemonFactory;
@@ -25,7 +25,7 @@ public class TranslatedQueryHandler : IRequestHandler<GetPokemonByName, Pokemon>
         _pokemonFactory = pokemonFactory;
     }
 
-    public async Task<Pokemon> Handle(GetPokemonByName request, CancellationToken cancellationToken)
+    public async Task<Pokemon> Handle(GetTranslatedPokemonByName request, CancellationToken cancellationToken)
     {
         var pokemonResponse = await _pokemonService.GetPokemon(request.Name);
         if (pokemonResponse == null)
