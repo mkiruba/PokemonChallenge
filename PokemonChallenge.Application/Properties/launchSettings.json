@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PokemonChallenge.Application": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
